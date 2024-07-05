@@ -8,10 +8,6 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [
-		8000
-	],
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -23,8 +19,11 @@
 		}
 	},
 
+	"initializeCommand": ".devcontainer/initializeCommand.sh",
+	"runArgs": ["--env-file", ".devcontainer/.env"],
+
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"updateContentCommand": "npm install",
+	"updateContentCommand": "npm install"
 
 	// Configure tool-specific properties.
 	// "customizations": {},

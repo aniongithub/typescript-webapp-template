@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
 
-const App: React.FC = () => {
+interface AppProps {
+  children?: React.ReactNode;
+};
+
+const App: React.FC<AppProps> = ({ children }) => {
     return (
       <div>
-        <h1>Hello, React+Webpack with TypeScript!</h1>
+        {children}
       </div>
     );
 }

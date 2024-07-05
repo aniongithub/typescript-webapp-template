@@ -4,7 +4,7 @@
 		{
 			"label": "waitForServer",
 			"type": "shell",
-			"command": "while ! nc -z localhost 3000; do sleep 1; done",
+			"command": "while ! nc -z localhost ${env:PORT}; do sleep 1; done",
 			"group": "none",
 			"problemMatcher": {
 				"base": "$tsc",

@@ -32,11 +32,6 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
-  devServer: {
-    static: path.join(__dirname, "dist"),
-    compress: true,
-    port: 3000,
-  },  
   plugins: [
     new CopyPlugin({
       patterns: [
